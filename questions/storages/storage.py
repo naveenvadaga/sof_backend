@@ -1,4 +1,5 @@
-from questions.models import QuestionTag, Tag, UserProfile, Question
+from user_auth.models import UserProfile
+from questions.models import QuestionTag, Tag, Question
 
 
 class Storage:
