@@ -63,10 +63,10 @@ class CreateQuestion:
 
     @staticmethod
     def _validate(question_details: dict):
-        if isinstance(question_details['title'], str) and \
+        if not isinstance(question_details['title'], str) and \
                 question_details['title']:
             raise InvalidQuestionTitleException()
-        if isinstance(question_details['body'], str) and \
+        if not isinstance(question_details['body'], str) and \
                 question_details['body']:
             raise InvalidQuestionBodyException()
 

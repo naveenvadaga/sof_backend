@@ -1,0 +1,57 @@
+[
+  {
+    "question_id": "str",
+    "question_title": "str",
+    "question_body": "str",
+    "tags": ["str"],
+    "votes": "Int",
+    "no_of_answers": "int",
+    "question_posted_at": "str",
+    "question_posted_user_name": "str",
+    "question_posted_user_reputation": "str"
+  }
+]
+
+
+input = {
+    "offset": int
+    "limit": int
+}
+
+
+
+###########
+
+//"question_id":
+
+
+
+{
+  "question_id": "str",
+  "question_title": "str",
+  "question_body": "str",
+  "tags": ["str"],
+  "votes": "Int",
+  "question_posted_at": "str",
+  "question_posted_user_name": str,
+  "question_posted_user_reputation": str
+  "answers":[
+        {
+                "answer_id": str,
+                "body": str,
+                "votes": "int",
+                "answered_user_name": str
+                "answered_user_reputation": int
+                "comments":[
+                        {
+                                "comment_id": str
+                                "body": str
+                                "votes": int,
+                                "commented_user_name": str
+                                "commented_user_reputation": int
+
+                        }
+                ]
+        }
+  ]
+}
