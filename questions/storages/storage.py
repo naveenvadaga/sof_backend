@@ -1,3 +1,5 @@
+from typing import List
+
 from user_auth.models import UserProfile
 from questions.models import QuestionTag, Tag, Question, Answer, Comment, Vote
 
@@ -100,5 +102,32 @@ class Storage:
             vote_type=vote,
         )
 
+    @staticmethod
+    def get_question_tags(
+            question_ids: List[str]):
+        return QuestionTag.objects.filter(
+            question_id__in=question_ids)
+
+    @staticmethod
+    def get_questions(
+            offset: int, limit: int):
+        return Question.objects.all()[
+            offset: offset+limit]
+
+    @staticmethod
+    def get_question_votes(
+            question_ids: List[str]):
+        return Vote.objects.filter(
+            question_id__in=question_ids)
+
+    @staticmethod
+    def get_users_details(user_ids):
+        return UserProfile.objects.filter(
+            id__in=user_ids)
 
 
+    @staticmethod
+    def get_question_answer(question_ids):
+        return Answer.objects.filter(
+            question_id__in=question_ids).values(
+            'question_id')
