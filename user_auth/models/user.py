@@ -3,5 +3,5 @@ from django.db import models
 
 
 class UserProfile(AbstractUser):
-    reputation = models.FloatField()
+    reputation = models.FloatField(default=0)
 
